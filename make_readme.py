@@ -17,8 +17,6 @@ A collection of GitHub repositories that in PubMed abstract.
 
 ## Top 1000 Repositories
 
-***Format: description, language, created date, updated date.***
-
 {top1000_repos_text}
 
 """
@@ -69,9 +67,9 @@ def get_top1000_repos_text(repos):
         author, name, language, stars, description = repo["author"], repo["name"], repo["language"], repo["stars"], repo["description"]
         pmids = "; ".join(f"[{pmid}](https://pubmed.ncbi.nlm.nih.gov/{pmid})" for pmid in repo["pmids"].split(";"))
         row.append(f"{i}. [{author}/{name}](https://github.com/{author}/{name}) (⭐{stars} · {language})")
-        row.append(f"{description} ({pmids})")
+        row.append(f"{description} (PMID: {pmids})")
         rows.append(" ".join(row))
-    text = "\n".join(rows)
+    text = "\n\n".join(rows)
     return text
 
 
