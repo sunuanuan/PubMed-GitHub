@@ -27,8 +27,8 @@ def download_repos(user, password, repos: set, output: str) -> None:
 
 
 def main(user, password):
-    repos = get_repos("repo_pubmed.txt")
-    download_repos(user, password, repos, "repo_github.txt")
+    repos = get_repos("downloads/repo_pubmed.txt")
+    download_repos(user, password, repos, "downloads/repo_github.txt")
 
 
 if __name__ == "__main__":

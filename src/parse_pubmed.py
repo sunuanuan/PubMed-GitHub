@@ -46,4 +46,4 @@ def main(input: str, output: str) -> list:
 
 
 if __name__ == "__main__":
-    main("data/", "repo_pubmed.txt")
+    main("downloads/", "downloads/repo_pubmed.txt")
