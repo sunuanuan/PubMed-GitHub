@@ -87,4 +87,4 @@ def main(input, output):
 
 
 if __name__ == "__main__":
-    main("downloads/repo_github.txt", "README.md")
+    main("../downloads/repo_github.txt", "../README.md")
